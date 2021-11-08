@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% block content %}
+<form action="" method="post" style="display: block; margin-top: 175px;">
+  {% csrf_token %}
+  <input style="display: block; position: relative; width: 90%; left: 5%; margin-top: 1%; height: 200px; font-size: 4.5em;" type="submit" name="poop" value="Poop ({{ lastPoop }})" class="btn btn-primary"/>
+  <input style="display: block; position: relative; width: 90%; left: 5%; margin-top: 1%; height: 200px; font-size: 4.5em;" type="submit" name="feed" value="Feed ({{ lastFeed }})" class="btn btn-secondary"/>
+  <input style="display: block; position: relative; width: 90%; left: 5%; margin-top: 1%; height: 200px; font-size: 4.5em;" type="submit" name="napStart" value="Nap {{ napMod }} ({{ lastNap }})" class="btn btn-success"/>
+  <input style="display: inline-block; position: relative; width: 70%; left: 5%; margin-top: 1%; height: 200px; font-size: 4.5em;" type="text" name="foodValue" placeholder="Food ({{ lastFood }})">
+  <input style="display: inline-block; position: relative; width: 20%; left: 5%; margin-top: 1%; height: 200px; font-size: 4.5em;" type="submit" name="food" value="Go">
+  <br>
+  <ul style="position: relative; width: 80%; left: 10%; font-size: 3.5em;">
+    {% for i in displayList %}
+      <li> {{ i | first }} {{ i | last }} </li>
+    {% endfor %}
+   </ul>
+    <input style="display: block; position: relative; left: 35%; font-size: 3.5em;" type="date" name="displayDay" value="{{ today }}">
+    <input style="display: block; position: relative; left: 35%; font-size: 3.5em;"type="submit" value="Select Day">
+</form>
+{%endblock%}

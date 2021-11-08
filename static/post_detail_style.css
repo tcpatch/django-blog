@@ -1,0 +1,9 @@
+#imagemodal {
+    width: 100%;
+}
+.modal-dialog {
+    max-width: 100%;
+}
+#closeButton {
+    font-size: 4em;
+}

@@ -1,0 +1,56 @@
+.masthead {
+    background: #66CDAA;
+    height: auto;
+    padding-bottom: 15px;
+    box-shadow: 0 16px 48px #E3E7EB;
+    padding-top: 10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #66CDAA;
+    border-color: #66CDAA;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #3CB371;
+    border-color: #3CB371;
+}
+.btn-primary:active {
+    color: #fff;
+    background-color: #3CB371;
+    border-color: #3CB371;
+}
+.btn-primary:hover, .btn-success:active, .btn-success:focus {
+    color: #fff !important;
+    background-color: #3CB371 !important;
+    border-color: #3CB371 !important;
+}
+
+.card {
+    box-shadow: 0 16px 48px #E3E7EB;
+    font-size: 2em;
+}
+
+#nameSubHeading {
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    padding-top: 2%;
+    font-size: 4em;
+    font-family: Georgia;
+    text-align: center;
+}
+
+#subHeading {
+    font-family: Gabriola;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.container {
+    max-width: 98%;
+}
+
+.card-title {
+    font-size: 1.3em;
+}

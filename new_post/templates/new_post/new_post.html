@@ -1,0 +1,36 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<form id="post_form" method="post" action="" enctype="multipart/form-data" style="margin-top: 175px">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form-group">
+        {{ field.errors }}
+        {% if field.label_tag|striptags|title == "Status:" %}
+            <div style="display: none;">{{ field.label_tag }} {{ field }}</div>
+        {% else %}
+            {{ field.label_tag }} {{ field }}
+        {% endif %}
+        {% if field.help_text %}
+        <p class="help">{{ field.help_text|safe }}</p>
+        {% endif %}
+    </div>
+{% endfor %}
+
+    {% for hidden in postForm.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+
+    {% for field in postForm %}
+        {{ field }} <br />
+    {% endfor %}
+
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {{ form }}
+    {% endfor %}
+
+
+    <input type="submit" name="submit" value="Submit" />
+</form>
+{%endblock%}

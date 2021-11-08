@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+{% block content %}
+
+{% if user.get_username == "authUser1" or user.get_username == "authUser2" %}
+<!-- <form method="post"> -->
+<form enctype="multipart/form-data" method="post" style="margin-top: 175px">
+    {% csrf_token %}
+    {{ form }}
+
+    {% if slug %}
+      <div>
+        <a data-toggle="collapse" href="#collapseDeleteOptions" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Delete
+        </a>
+      </div>
+      <div class="collapse" id="collapseDeleteOptions">
+        <ul id="delete">
+            <li><label for="delete_status"><input type="radio" name="delete_status" value="delete" id="delete_status">Delete</label>
+        </ul>
+      </div>
+    {% endif %}
+
+    <input type="submit" value="Submit">
+</form>
+{% else %}
+{% endif %}
+{%endblock%}

@@ -1,0 +1,51 @@
+/* 
+https://stackoverflow.com/questions/3368837/list-every-font-a-users-browser-can-display
+*/
+
+body {
+    font-family: 'Georgia';
+    font-size: 17px;
+    background-color: #fdfdfd;
+}
+.shadow {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+.masthead {
+    background: #3398E1;
+    height: auto;
+    padding-bottom: 15px;
+    box-shadow: 0 16px 48px #E3E7EB;
+    padding-top: 10px;
+}
+@media only screen and (min-width: 600px) {
+    .navbar {
+     height: 150px !important; 
+    }
+ }
+ @media only screen and (min-width: 768px) {
+    .navbar {
+     height: 170px !important; 
+   } 
+ }
+
+ .navbar-brand {
+     font-size: 4em !important;
+ }
+
+ .navbar-toggler {
+    width: 134px !important;
+    height: 134px  !important;
+}
+
+.navbar-toggler-icon {
+    width: 75% !important;
+    height: 75%  !important;
+}
+
+a {
+    font-size: 1.5em;
+}
+
+.pagination {
+    font-size: 1.5em;
+}
